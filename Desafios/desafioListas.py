@@ -23,6 +23,10 @@ lista2.pop(0)
 lista2.pop(1)
 lista4 = lista2
 
+lista5 = lista4 + lista3
+
+
 # lista4 = lista2.pop(1)
 print('El contenido de la lista3 es: ', lista3)
 print('El contenido de la lista4 es: ', lista4)
+print('El contenido de la lista5 es: ', lista5)
