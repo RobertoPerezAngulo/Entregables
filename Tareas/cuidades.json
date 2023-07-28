@@ -1,0 +1,16 @@
+{
+    "cuidad": [
+        {
+            "nombre": "Bogota",
+            "pais": "Colombia"
+        },
+        {
+            "nombre": "Medellin",
+            "pais": "Colombia"
+        },
+        {
+            "nombre": "Cali",
+            "pais": "Colombia"
+        }
+    ]
+}
