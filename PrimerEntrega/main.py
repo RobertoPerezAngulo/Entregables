@@ -1,9 +1,8 @@
 # Autor: Jose Roberto Pérez Angulo
-# Fecha: 17/09/2021
+# Fecha: 28/07/2023
 # Descripción: Utilizar una funcion para almacenar dicha información, con el para usuario-contrasenia
 # Utilizar un diccionario para almacenar dicha informacion con el par Usuario-contrasenia
 # Utilizar otra funcion para login de usuarios, comprobando que la contraseia coicida con el usuario
-import json
 import os
 
 data = [{
