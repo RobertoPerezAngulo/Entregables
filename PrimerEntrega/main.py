@@ -7,9 +7,9 @@ import os
 
 data = [{
     "id": "1",
-    "nombre" : "Admin",
-    "user" : "",
-    "password" : ""
+    "nombre" : "Administrador",
+    "user" : "Admin",
+    "password" : "123"
 }]
 
 # Crear un archivo txt para almacenar la informacion
@@ -23,7 +23,7 @@ def leerArchivo():
     file = open("data.txt", "r")
     data = file.read()
     file.close()
-    print(data)
+    #print(data)
     return data
 
 # Identifica si existe el txt
@@ -58,6 +58,33 @@ def guardarInformacion(data):
     file.close()
     print("Informacion guardada con exito")
 
+#Login de usuario
+def login():
+    try:
+        # Valida si existe el archivo
+        if existeArchivo() == False:
+            crearArchivo()
+        # Lee el archivo
+        data = eval(leerArchivo())
+        user = input("Ingrese su usuario: ")
+        password = input("Ingrese su contraseña: ")
+        for i in data:
+            if i["user"] == user and i["password"] == password:
+                print("Bienvenido " + i["nombre"])
+                break
+            else:
+                print("Usuario o contraseña incorrectos")
+    except Exception as e:
+        print("Error al almacenar la informacion " +  e.__str__() )
+
+
+
 
 # Funcion para validar el usuario
-almacenarInformacion()
+select = input('Seleccione una opcion: \n 1. Almacenar informacion \n 2. Login \n 3. Salir \n')
+if(select == "1"):
+    almacenarInformacion()
+elif(select == "2"):
+    login()
+elif(select == "3"):
+    exit()
