@@ -5,17 +5,11 @@
 # Utilizar otra funcion para login de usuarios, comprobando que la contraseia coicida con el usuario
 import os
 
-data = [{
-    "id": "1",
-    "nombre" : "Administrador",
-    "user" : "Admin",
-    "password" : "123"
-}]
 
 # Crear un archivo txt para almacenar la informacion
 def crearArchivo():
     file = open("data.txt", "w")
-    file.write(str(data))
+    file.write("[]")
     file.close()
 
 # Leer archivo txt
@@ -74,6 +68,8 @@ def login():
                 break
             else:
                 print("Usuario o contraseña incorrectos")
+        else:
+            print("No existe datos favor de crear el archivo")
     except Exception as e:
         print("Error al almacenar la informacion " +  e.__str__() )
 
