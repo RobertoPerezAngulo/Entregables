@@ -64,23 +64,38 @@ def login():
         password = input("Ingrese su contraseña: ")
         for i in data:
             if i["user"] == user and i["password"] == password:
-                print("Bienvenido " + i["nombre"])
-                break
-            else:
-                print("Usuario o contraseña incorrectos")
+                print("Bienvenido usuario " + i["nombre"].upper() + " al sistema")
+                #Es usuario administrador
+                if(i.get('user') == "admin" and i.get('password') == "123"):
+                    return True
         else:
-            print("No existe datos favor de crear el archivo")
+            print("Usuario o contraseña incorrectos")
+            return False
     except Exception as e:
         print("Error al almacenar la informacion " +  e.__str__() )
 
+# Imprime la informacion
+def accesoAdminImprimeUsuarios():
+    if(login() == True):
+        data = eval(leerArchivo())
+    else:
+        print("No tiene permisos para acceder a la informacion")
+        exit()
+    for i in data:
+        print("\nLa información es confidencial, solo el administrador puede acceder a la información")
+        print(f"El {i.get('id')} es Nombre es {i.get('nombre').upper()} " +  
+              f"y el acceso al sistema es {i.get('user').upper()} " +
+              f"con un password {i.get('password').upper()}")
 
 
 
 # Funcion para validar el usuario
-select = input('Seleccione una opcion: \n 1. Almacenar informacion \n 2. Login \n 3. Salir \n')
+select = input('Seleccione una opcion: \n 1. Almacenar informacion \n 2. Login \n 3. Imprime usuarios \n 4. Salir \n op: ')
 if(select == "1"):
     almacenarInformacion()
 elif(select == "2"):
     login()
+elif(select == "3"):
+    accesoAdminImprimeUsuarios()
 elif(select == "3"):
     exit()
