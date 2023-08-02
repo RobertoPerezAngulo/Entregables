@@ -97,5 +97,7 @@ elif(select == "2"):
     login()
 elif(select == "3"):
     accesoAdminImprimeUsuarios()
-elif(select == "3"):
+elif(select == "4"):
     exit()
+else:
+    print("Opcion no valida")
