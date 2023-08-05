@@ -113,9 +113,11 @@ def accesoAdminImprimeUsuarios():
 
 # Funcion para validar el usuario e ingresar al sistema
 def accesoUsuario():
+    print("Bienvenido al sistema")
+    print("El usuario administrador es usuario: admin  passsword: 123")
     role = login()
     if(role == 1):
-        select = input('Seleccione una opcion: \n 1. Almacenar informacion \n 2. Imprime usuarios \n 3. Salir \n op: ')
+        select = input('Seleccione una opcion: \n 1. Crear usuario \n 2. Imprime usuarios \n 3. Salir \n op: ')
         if(select == "1"):
             almacenarInformacion()
         elif(select == "2"):
@@ -125,7 +127,7 @@ def accesoUsuario():
         else:
             print("Opcion no valida")
     elif(role == 2):
-        select = input('Seleccione una opcion: \n 1. Almacenar informacion \n 2. Salir \n op: ')
+        select = input('Seleccione una opcion: \n 1. Crear usuario  \n 2. Salir \n op: ')
         if(select == "1"):
             almacenarInformacion()
         elif(select == "2"):
