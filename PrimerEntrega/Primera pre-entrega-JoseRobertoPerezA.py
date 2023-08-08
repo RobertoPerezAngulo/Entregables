@@ -53,22 +53,18 @@ def existeArchivo():
 
 # Funcion para almacenar la informacion
 def almacenarInformacion():
-    try:
-        # Valida si existe el archivo
-        if not existeArchivo():
-            crearArchivo()
-        # Lee el archivo
-        data = leerArchivo()
-        #Obtenemos el ultimo numero digitado
-        id = int(len(data)) + 1 
-        nombre = input("Ingrese su nombre: ")
-        user = input("Ingrese su usuario: ")
-        password = input("Ingrese su contraseña: ")
-        role = registraRol()
-        data.append({"id": id, "nombre": nombre, "user": user, "password": password, "role": role})
-        guardarInformacion(data)
-    except Exception as e:
-        print(e.__str__() )
+    if not existeArchivo():
+        crearArchivo()
+    # Lee el archivo
+    data = leerArchivo()
+    #Obtenemos el ultimo numero digitado
+    id = int(len(data)) + 1 
+    nombre = input("Ingrese su nombre: ")
+    user = input("Ingrese su usuario: ")
+    password = input("Ingrese su contraseña: ")
+    role = registraRol()
+    data.append({"id": id, "nombre": nombre, "user": user, "password": password, "role": role})
+    guardarInformacion(data)
 
 # Guarda la informacion en el txt
 def guardarInformacion(data):
