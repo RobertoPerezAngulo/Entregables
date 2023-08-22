@@ -1,3 +1,5 @@
+from CursoPython.SegundaEntrega import SegundaEntrega
+
 # Notas final de estudiantes
 # Autor: Jose Roberto Perez Angulo
 # Fecha: 29/06/2023
@@ -12,3 +14,7 @@ promedio = (int(nota_1) + int(nota_2) + int(nota_3)) / 3
 
 # Imprimir resultado
 print('El promedio es: ', promedio)
+
+
+
+cliente = SegundaEntrega.client(1, "Juan", 30, "Perez", "Calle A", "123456", "juancito", "clave123")
