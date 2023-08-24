@@ -1,0 +1,14 @@
+para ejecutar la apliacacion debiste de configurar el Pipfile
+
+solo correr pipenv run dev
+
+pipenv  --version
+
+
+#Como crear un entrono virtual
+
+#Acivo o crea
+pipenv shell
+
+pipenv freeze -> toas las libreias que tienes instalada
+

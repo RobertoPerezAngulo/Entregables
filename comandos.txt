@@ -1,0 +1,99 @@
+## Instala el env 
+pip install pipenv
+
+## Para activar entorno virtual
+pipenv shell
+
+## Para ver información del entorno virtual
+pipenv --venv
+
+## Para eliminar entorno virtual
+pipenv --rm
+
+##Intalar de archivo requirements
+pipenv install -r requirements.txt
+
+
+##Creacion proyecto django
+pipenv install django
+pipenv run django-admin startproject <proyect_name>
+
+## ->here-> Replace folder create one level
+## adicion de dependencias
+pipenv install djangorestframework
+pipenv install markdown
+pipenv install django-filter
+
+
+## exportacion de requerimientos o dependencias
+pipenv requirements > requirements.txt
+## run migrate
+pipenv run migrate
+## crear superuser
+pipenv run python manage.py createsuperuser
+
+## adicion de environ para variables de entorno
+pipenv install django-environ
+
+## creacion de aplicacion para el proyecto
+python manage.py startapp <app_name>
+
+## creacion de un empy migrate para custom
+python manage.py makemigrations --empty <app_name>
+
+## reset migrations
+python manage.py migrate <app_name> <migration>
+----------------------------
+## Creacion de nuevo proyecto con nuxt.js
+npm init nuxt-app <project-name>
+
+
+----------------------------
+--- firewalld --------------
+----------------------------
+sudo yum install firewalld
+
+sudo systemctl enable firewalld
+sudo reboot
+
+sudo firewall-cmd --state => Output
+running
+
+sudo firewall-cmd --get-default-zone => Output
+public
+
+sudo firewall-cmd --get-active-zones => Output
+public
+  interfaces: eth0 eth1
+
+sudo firewall-cmd --zone=public --permanent --add-port=8844/tcp => Output
+success
+
+sudo firewall-cmd --zone=public --permanent --add-port=4990-4999/udp
+
+sudo firewall-cmd --zone=public --list-ports => Output
+8080/tcp 80/tcp 8844/tcp
+
+sudo firewall-cmd --zone=public --remove-port=8844/tcp
+
+----------------------------
+--- nginx ------------------
+----------------------------
+sudo systemctl status nginx
+
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+sudo systemctl disable nginx
+
+sudo nginx -t
+
+
+
+-----------------------------------
+psycopg2-binary
+
+
+-- Saca los trucos --
+---- para python ----
+insertar un assert False para provocar una página de error. Luego, podremos ver las variables locales y el estado del programa.
