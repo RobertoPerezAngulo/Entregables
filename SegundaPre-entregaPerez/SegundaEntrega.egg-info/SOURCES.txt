@@ -1,6 +1,0 @@
-main.py
-setup.py
-SegundaEntrega.egg-info/PKG-INFO
-SegundaEntrega.egg-info/SOURCES.txt
-SegundaEntrega.egg-info/dependency_links.txt
-SegundaEntrega.egg-info/top_level.txt

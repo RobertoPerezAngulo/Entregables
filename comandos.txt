@@ -97,3 +97,15 @@ psycopg2-binary
 -- Saca los trucos --
 ---- para python ----
 insertar un assert False para provocar una página de error. Luego, podremos ver las variables locales y el estado del programa.
+
+
+
+
+---------Paquetes redistribuibles
+__init__.py vacio
+setup.py
+
+ejecuta comando python setup.py sdist
+
+ejecuta dentro de la carpeta dist el paquete con su extencion en gz
+
